@@ -1,0 +1,10 @@
+Explanation:
+
+The main thing I want to get across in this explination is how I chose the cube to have the boundries of x = 1, y = 1, z = 1 and evaluate the electric field at (0.5,0.5,0.5). 
+Essentially, since Java has built in random number generators that generate a random number form 0 to 1 I just used those to generate x,y,z coordinates for each point charge. 
+Since they can't be larger than 1, they will all be confined to the cube of x = 1, y = 1, z = 1. I chose to evalute the field at (0.5,0.5,0.5), thus in my add methods you'll see 
+me find r-squared from the point 0.5 for each component. Now, we know from the shell theorems that if the boundry was a sphere and I was evaluating it at the center the charge would
+be really small (it should be 0 if we take the limit). So why are all of the outputs large? That's because most of the charges don't evenly distribute. The IDE I am using has a pretty
+small limit on how many charges I can generate but when I increased the number of charges to 1,000,000 the charges did get slightly smaller. So eventually with a large enough number of 
+point charges a lot of them should cancel out, however they shouldn't be really small or 0 because I didn't set the boundry to equal a sphere. I just thought it was weird that my charges 
+just kept coming up as really large terms. However the factor of the electrostatic constant and the fact that the cube is small has a large part to do with that. 
